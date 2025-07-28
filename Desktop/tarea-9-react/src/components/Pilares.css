@@ -1,0 +1,48 @@
+.pilares {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.pilares__title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #222;
+}
+
+.pilares__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.pilar {
+  max-width: 200px;
+  background-color: #f5f5f5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.pilar:hover {
+  transform: translateY(-5px);
+}
+
+.pilar__texto {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive: en pantallas más grandes, en fila */
+@media (min-width: 768px) {
+  .pilares__contenedor {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .pilar {
+    margin: 0 1rem;
+  }
+}
