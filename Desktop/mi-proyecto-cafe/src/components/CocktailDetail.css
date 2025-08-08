@@ -1,0 +1,121 @@
+/* Modal overlay */
+.cocktail-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  backdrop-filter: blur(6px); /* Difuminado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(6px);
+  }
+}
+
+.cocktail-detail__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 500px;
+  width: 90%;
+  overflow-y: auto;
+  max-height: 90vh;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cocktail-detail__card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.cocktail-detail__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e85d75;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(232,93,117,0.15);
+  transition: background 0.2s;
+}
+
+.cocktail-detail__close:hover {
+  background: #d72660;
+}
+
+.cocktail-detail__card h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #e85d75;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.cocktail-detail__card h4 {
+  margin: 1.2rem 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #e85d75;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.cocktail-detail__card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cocktail-detail__card li {
+  margin-bottom: 0.3rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+.cocktail-detail__card p {
+  color: #444;
+  background: #fff7f9;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(232,93,117,0.1);
+}
